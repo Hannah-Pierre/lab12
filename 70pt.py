@@ -27,7 +27,11 @@ class MyApp:
 		self.button3 = Button(self.myContainer1)
 		self.button3.configure(text="Test?", background="cyan")  
 		self.button3.grid(row=0,column=2)	  ### (3)
-			
+		
+		
+		self.button3 = Button(self.myContainer1)
+		self.button3.configure(text="goodbye", background="yellow")  
+		self.button3.grid(row=0,column=3)	  ### (4)	
 	
 		
 root = Tk()
