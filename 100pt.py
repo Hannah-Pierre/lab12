@@ -31,12 +31,27 @@ class MyApp:
 		self.button2.configure(text="Right", background= "red")
 		self.button2.grid(row=0,column=1)		
 		
-						
+		
+		self.button3 = Button(self.myContainer1)
+		self.button3.configure(text="Up", background= "blue")
+		self.button3.grid(row=1,column=0)
+		
+		
+		self.button4 = Button(self.myContainer1)
+		self.button4.configure(text="Down", background= "orange")
+		self.button4.grid(row=1,column=1)
+		
+										
 		# "Bind" an action to the first button												
 		self.button1.bind("<Button-1>", self.button1Click)
 		# Create the code to bind an action to the second button
 		# Do not change "<Button-1>"
 		self.button2.bind("<Button-1>", self.button2Click)
+		
+		self.button3.bind("<Button-1>", self.button3Click)
+		
+		self.button4.bind("<Button-1>", self.button4Click)
+		  
 		  
 		# This creates the drawpad - no need to change this 
 		drawpad.pack()
@@ -54,6 +69,17 @@ class MyApp:
 		drawpad.move(oval, 20, 0)
                 global oval
 		global drawpad
+		
+	def button3Click(self, event):   
+		drawpad.move(oval, 0, -20)
+                global oval
+		global drawpad	
+		
+	def button4Click(self, event):   
+		drawpad.move(oval, 0, 20)
+                global oval
+		global drawpad	
+		
 	# Add the event handler for the second button to make it move right!
 	
 		
